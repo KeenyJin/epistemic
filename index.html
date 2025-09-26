@@ -318,10 +318,18 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Introduction</h2>
+        <h2 class="title is-3">Theorems</h2>
         <!-- <div class="content has-text-justified"> -->
-          <p>
-            Introduction
+          <p><b>Lemma 3.1</b> (Approximate local Gaussianity under small perturbation). 
+Let $f = \{ f_t \}_{t=1}^L$ be a smooth $L$-layer neural network parameterized by $\theta$. 
+For an input $x \in \mathbb{R}^{N \times 3}$, define the hidden state at layer $t$ as 
+$z^{(t)} = f_t \circ \cdots \circ f_1(x)$. 
+For a perturbed input $x + \epsilon$, with $\|\epsilon\|_\infty \leq k$ for sufficiently small $k > 0$, 
+define the perturbed hidden state as 
+$Z^{(t)} = f_t \circ \cdots \circ f_1(x + \epsilon)$. 
+Then, under the assumption that the perturbation is small and $f \in C^2$, 
+$Z^{(t)}$ can be locally approximated by a Gaussian centered at $z^{(t)}$, 
+with a third-order remainder in the log-density.
           </p>
         <!-- </div> -->
       </div>
@@ -545,5 +553,15 @@
   </div>
 </footer>
 
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']]
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
 </body>
 </html>
