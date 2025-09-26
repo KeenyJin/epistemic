@@ -359,21 +359,19 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Method</h2>
-        <!-- <div class="content has-text-justified"> -->
         <figure style="text-align: center; margin: 2em auto; max-width: 1000px;">
         <img src="static/images/method.png" 
              alt="Adversarial attack and uncertainty mask"
              style="width: 100%; height: auto;">
         </figure>
-        <p>
+        <div class="content has-text-justified"><p>
           <b>Figure 1:</b> Overall illustration of the adversarial attack and uncertainty mask generation process. 
           <b>(a)</b> The original image is processed by the vision encoder (VE) to obtain features $f_{orig}$. 
           An adversarial image is created by adding optimizable noise and encoded to produce $f_{attk}$.
           The noise is optimized using Projected Gradient Descent (PGD) to maximize the mean squared error between $f_{orig}$ and $f_{attk}$.
           <b>(b)</b> From intermediate layers of the encoder, the norm differences of corresponding features form layer-wise uncertainty maps. 
           These maps are min-max normalized, aggregated, and standardized to produce the final binary uncertainty mask $M$.
-        </p>
-        <!-- </div> -->
+        </p></div>
       </div>
     </div>
   </div>
@@ -385,11 +383,19 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Quantitative Results</h2>
-        <!-- <div class="content has-text-justified"> -->
-          <p>
-            Quantitative Results
+        <figure style="text-align: center; margin: 2em auto; max-width: 1000px;">
+        <img src="static/images/quali.png" 
+             alt="Quantitative results"
+             style="width: 100%; height: auto;">
+        </figure>
+        <div class="content has-text-justified"><p>
+          <b>Table 1:</b> Quantitative results on CHAIR and POPE benchmarks. 
+          <p>Object hallucination is evaluated on the CHAIR and POPE benchmarks using three LVLMs and five decoding strategies, both with and without our method.
+            POPE results are reported on three splits: Random, Popular, and Adversarial. The maximum token length is set to 512.
+            Δ% denotes the relative difference in performance. ↑ / ↓ indicate that higher / lower values are better.
+            We highlight the best scores in <b>bold</b>.
           </p>
-        <!-- </div> -->
+        </p></div>
       </div>
     </div>
   </div>
@@ -401,11 +407,18 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Qualitative Results</h2>
-        <!-- <div class="content has-text-justified"> -->
-          <p>
-            Qualitative Results
+        <figure style="text-align: center; margin: 2em auto; max-width: 1000px;">
+        <img src="static/images/quali.png" 
+             alt="Qualitative results"
+             style="width: 100%; height: auto;">
+        </figure>
+        <div class="content has-text-justified"><p>
+          <b>Figure 7:</b> Qualitative results of our method on LLaVA-1.5-7B and Shikra-7B. 
+          <p>Greedy decoding leads to object hallucinations by describing non-existent objects in the image
+            (<i>e.g.</i>, ‘<i>several people</i>’, ‘<i>bench</i>’, ‘<i>handbag</i>’, ‘<i>passengers</i>’ in LLaVA; ‘<i>a few cars</i>’, ‘<i>car</i>’, ‘<i>a fire hydrant</i>’ in Shikra).
+            In contrast, our method, which modifies only the vision encoder, substantially reduces such hallucinations.
           </p>
-        <!-- </div> -->
+        </p></div>
       </div>
     </div>
   </div>
