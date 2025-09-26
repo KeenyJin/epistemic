@@ -333,7 +333,7 @@
           with a third-order remainder in the log-density.
           </p>
           <p><b>Theorem 3.2</b> (Upper bound of differential entropy increases as hidden state deviation increases under adversarial attack).</p>
-          <p>
+          <div style="background-color: #f9f9f9; padding: 15px; border-left: 4px solid #888; margin: 1em 0;"><p>
           Let $x$ be an input image, and let $\epsilon$ be a small adversarial perturbation. 
           Define the perturbed input as $X := x + \epsilon$. 
           Let $f = \{ f_t \}_{t=1}^L$ be a smooth $L$-block transformer that processes a sequence of $N$ input tokens. 
@@ -343,8 +343,8 @@
           Denote the $i$-th token representation at layer $t$ as $z_i^{(t)} \in \mathbb{R}^d$ and $Z_i^{(t)} \in \mathbb{R}^d$. 
           If $Z_i^{(t)}$ changes smoothly with small $\epsilon$, then the upper bound of the differential entropy of $Z_i^{(t)}$ increases as 
           $\mathbb{E}_\epsilon \!\big[ \lVert Z_i^{(t)} - z_i^{(t)} \rVert_2^2 \big]$ increases.
-          </p>
-          <p>Theorem 3.2 shows that under adversarial attack, the norm of hidden state deviation efficiently approximates the upper bound of visual token’s entropy.</p>
+          </p></div>
+          <p><b>Theorem 3.2 shows that under adversarial attack, the norm of hidden state deviation efficiently approximates the upper bound of visual token’s entropy.</b></p>
         </div>
       </div>
     </div>
