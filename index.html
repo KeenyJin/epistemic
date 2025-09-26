@@ -360,12 +360,19 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Method</h2>
         <!-- <div class="content has-text-justified"> -->
-        <div style="display: flex; align-items: center; margin: 1em 0;">
-        <img src="static/images/method.png" alt="Adversarial attack and uncertainty mask" style="width:50%; max-width:500px; height:auto;">
-        </div>
-        <p>
-        <b>Figure 1:</b> Overall illustration of the adversarial attack and uncertainty mask generation process.
-        </p>
+        <figure style="text-align: center; margin: 2em auto; max-width: 1000px;">
+        <img src="static/images/fig1.png" 
+             alt="Adversarial attack and uncertainty mask"
+             style="width: 100%; height: auto;">
+        <figcaption style="text-align: justify; font-size: 0.95em; margin-top: 0.8em; line-height: 1.4;">
+          <b>Figure 1:</b> Overall illustration of the adversarial attack and uncertainty mask generation process. 
+          <b>(a)</b> The original image is processed by the vision encoder (VE) to obtain features $f_{orig}$. 
+          An adversarial image is created by adding optimizable noise and encoded to produce $f_{attk}$.
+          The noise is optimized using Projected Gradient Descent (PGD) to maximize the mean squared error between $f_{orig}$ and $f_{attk}$.
+          <b>(b)</b> From intermediate layers of the encoder, the norm differences of corresponding features form layer-wise uncertainty maps. 
+          These maps are min-max normalized, aggregated, and standardized to produce the final binary uncertainty mask $M$.
+        </figcaption>
+      </figure>
         <!-- </div> -->
       </div>
     </div>
