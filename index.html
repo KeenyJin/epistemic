@@ -384,6 +384,29 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
+        <h2 class="title is-3">Comparison with MC Dropout</h2>
+        <figure style="text-align: center; margin: 2em auto; max-width: 1000px;">
+        <img src="static/images/mcdropout.png" 
+             alt="Visual comparison of estimated uncertainty from MC dropout and our method"
+             style="width: 100%; height: auto;">
+        </figure>
+        <div class="content has-text-justified"><p>
+          <b>Figure 2:</b> Visual comparison of estimated uncertainty from MC dropout and our method. 
+        </p><p>
+          We compare our uncertainty map <i>U</i> with MC dropout to assess how well <i>U</i> approximates epistemic uncertainty.
+          As shown in Figure 2, the results indicate that <i>U</i> closely aligns with the uncertainty estimated via MC dropout,
+          demonstrating that <i>U</i> serves as an efficient approximation. On average, it is approximately 5 times faster than MC dropout in practice.
+        </p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
         <h2 class="title is-3">Quantitative Results</h2>
         <figure style="text-align: center; margin: 2em auto; max-width: 1000px;">
         <img src="static/images/quanti.png" 
