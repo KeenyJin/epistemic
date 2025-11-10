@@ -366,11 +366,25 @@
         </p><p>
           We focus on the <b>uncertainty of visual tokens</b> introduced by the pre-trained vision encoder.
         </p></div>
+        <h2 class="title is-5">Uncertain Visual Tokens Contribute to Hallucination</h2>
+        <figure style="text-align: center; margin: 2em auto; max-width: 1000px;">
+        <img src="static/images/uncertainty.png" 
+             alt="Relationship between uncertain visual tokens and object hallucination"
+             style="width: 100%; height: auto;">
+        </figure>
+        <div class="content has-text-justified"><p>
+          <b>Figure 4:</b> Relationship between uncertain visual tokens and object hallucination. 
+        </p><p>
+          The <i>x</i>-axis represents the average variance within each bin, while the <i>y</i>-axis shows the corresponding metric scores.
+          The results indicate that higher uncertainty is associated with more object hallucination, with <i>p</i>-value < 0.05.
+          Note that <i>higher values</i> of CHAIR<sub>s</sub> and CHAIR<sub>i</sub>, and <i>lower</i> F1 score indicate more <i>severe object hallucinations</i>.
+        </p></div>
       </div>
     </div>
   </div>
 </section>
 
+  
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -423,28 +437,7 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Uncertain Visual Tokens Contribute to Hallucination</h2>
-        <figure style="text-align: center; margin: 2em auto; max-width: 1000px;">
-        <img src="static/images/uncertainty.png" 
-             alt="Relationship between uncertain visual tokens and object hallucination"
-             style="width: 100%; height: auto;">
-        </figure>
-        <div class="content has-text-justified"><p>
-          <b>Figure 4:</b> Relationship between uncertain visual tokens and object hallucination. 
-        </p><p>
-          The <i>x</i>-axis represents the average variance within each bin, while the <i>y</i>-axis shows the corresponding metric scores.
-          The results indicate that higher uncertainty is associated with more object hallucination, with <i>p</i>-value < 0.05.
-          Note that <i>higher values</i> of CHAIR<sub>s</sub> and CHAIR<sub>i</sub>, and <i>lower</i> F1 score indicate more <i>severe object hallucinations</i>.
-        </p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
+  
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
